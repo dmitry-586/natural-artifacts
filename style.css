@@ -1,0 +1,478 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+a {
+    border: none;
+    color: white;
+    text-decoration: none;
+}
+
+.header {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    display: flex;
+    margin-left: auto;
+    padding: 20px 0 20px 100px;
+    background-color: rgb(29, 47, 48);
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+
+.logo {
+    margin-right: 125px;
+}
+
+.header_menu {
+    display: flex;
+    gap: 64px;
+    color: white;
+}
+
+.header_icons {
+    display: flex;
+    margin-left: auto;
+    margin-right: 150px;
+    gap: 64px;
+}
+
+#open {
+    display: flex;
+}
+
+#close {
+    display: none;
+}
+
+.burger {
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+    margin-right: 100px;
+}
+
+.burger span {
+    height: 2px;
+    width: 100%;
+    transform: scale(1);
+    background-color: white;
+}
+
+.burger::before, .burger::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before { top: 0; }
+
+.burger::after { bottom: 0; }
+
+.burger.active span { transform: scale(0); }
+
+.burger.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+.header_icons:hover {
+    cursor: pointer;
+}
+
+.catalog:hover {
+    color: rgb(186, 226, 73);
+}
+
+.gallery:hover {
+    color: rgb(186, 226, 73);
+}
+
+.about_laboratory:hover {
+    color: rgb(186, 226, 73);
+}
+
+.contacts:hover {
+    color: rgb(186, 226, 73);
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(29, 47, 48);
+    height: 550px;
+    width: 100%;
+}
+
+.description_img {
+    position: absolute;
+    opacity: 0.6;
+}
+
+.description_h1 {
+    position: relative;
+    z-index: 50;
+    font-family: 'Cormorant';
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 100%;
+    margin-left: 100px;
+}
+
+.description_text {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    position: relative;
+    z-index: 50;
+    margin-bottom: 35px;
+    margin-left: 100px;
+}
+
+.description_link {
+    display: flex;
+    position: relative;
+    z-index: 50;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    width: 157px;
+    margin-left: 95px;
+    padding-left: 5px;
+}
+
+.description_link img {
+    margin-top: 4px;
+    margin-left: 8px;
+}
+
+.description_wrapper {
+    margin-top: 80px;
+    width: 688px;
+}
+
+#green_link {
+    color: rgb(186, 226, 73);
+}
+
+.description_link:hover {
+    border: solid 1px;
+    color: rgb(186, 226, 73);
+}
+
+.section_2 {
+    background-color: rgb(29, 47, 48);
+    padding-top: 60px;
+    padding-left: 100px;
+    padding-bottom: 62px;
+    position: absolute;
+    width: 100%;
+}
+
+.cards {
+    display: flex;
+    gap: 40px;
+}
+
+.card {
+    width: 255px;
+    height: 493px;
+    padding-bottom: 24px;
+    border: solid 1px;
+    border-color: rgb(11, 25, 25);
+    position: relative;
+}
+
+.card_img {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(11, 25, 25);
+    width: 255px;
+    height: 180px;
+}
+
+.group_204 {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+.layer {
+    margin: 30px 16px 30px 16px;
+}
+
+.card_header {
+    font-family: 'Cormorant';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+    margin: 16px 0 8px 16px;
+}
+
+.card_text {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    margin-right: 16px;
+    margin-left: 16px;
+    color: rgb(137, 157, 157);
+}
+
+.card_btn {
+    border: 1px solid rgb(186, 226, 73);
+    background-color: rgb(29, 47, 48);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20.5px 59px 20.5px 59px;
+    color: rgb(186, 226, 73);
+    margin-left: 16px;
+    position: absolute;
+    bottom: 24px;
+}
+
+.card_btn:hover {
+    cursor: pointer;
+}
+
+.case_for_arrows {
+    display: flex;
+    column-gap: 50px;
+    opacity: 0;
+}
+
+
+@media (min-width: 1200px) {
+    
+}
+
+@media (992px <= width <= 1200px) {
+    body {
+        max-width: 1200px;
+    }
+    .header {
+        padding: 20px 20px 20px 40px;
+    }
+    .header_icons {
+        margin-left: 120px;
+    }
+    .description {
+        height: 430px;
+    }
+    .description_h1 {
+        margin: 35px 0 35px 40px;
+    }
+    .description_text {
+        width: 600px;
+        margin-left: 40px;
+        margin-bottom: 25px;
+    }
+    .description_link {
+        margin-left: 35px;
+    }
+    .section_2 {
+        padding: 30px 0 45px 20px;
+    }
+    .cards {
+        justify-content: center;
+        gap: 20px;
+    }
+    .card {
+        width: 215px;
+    }
+    .card_img {
+        width: 215px;
+        height: 160px;
+    }
+    .card_btn {
+        padding-left: 56px;
+        padding-right: 56px;
+    }
+}
+
+@media (768px <= width <= 991px ) {
+    .header {
+        padding: 20px;
+    }
+    .logo {
+        margin-right: 50px;
+    }
+    .header_menu {
+        gap: 30px;
+    }
+    .header_icons {
+        margin-top: 6px;
+        gap: 30px;
+        margin-left: 100px;
+    }
+    .description {
+        height: 400px;
+    }
+    .description_h1 {
+        margin: 20px;
+    }
+    .description_text {
+        margin-left: 20px;
+        margin-bottom: 20px;
+        font-size: 21px;
+    }
+    .description_link {
+        margin-left: 15px;
+        font-size: 20px;
+    }
+    .section_2 {
+        padding: 60px 0 32px 0;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        column-gap: 80px;
+        justify-content: center;
+    }
+}
+
+@media (480px <= width <= 767px) {
+    .header {
+        padding: 20px 0 20px 10px;
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        justify-content: flex-start;
+    }
+    .header_icons {
+        margin: 0;
+        padding: 0;
+    }
+    .burger {
+        display: flex;
+        z-index: 100;
+        margin-right: 0;
+        margin-left: 100px;
+    }
+    .logo {
+        margin-right: 50px;
+    }
+    .header_menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        background-color: rgb(29, 47, 48);
+        top: 0; bottom: 0; left: 0; right: 0;
+        gap: 25px;
+        padding: 30px 30px;
+        overflow-y: auto;
+        animation: burgerAnimation 0.5s;
+    }
+    .description {
+        height: 450px;
+    }
+    .description_h1, .description_link {
+        margin-left: 20px;
+        max-width: 400px;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+    .description_text {
+        display: none;
+    }
+    .section_2 {
+        padding: 0;
+    }
+    .cards {
+        width: 500px;
+        height: 540px;
+        position: relative;
+        overflow: hidden;
+        margin-left: 100px;
+        margin-top: 30px;
+    }
+    .card {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.5 ease;
+    }
+    .card.slider {
+        opacity: 1;
+    }
+    .case_for_arrows {
+        justify-content: flex-start;
+        opacity: 1;
+        margin-left: 100px;
+        margin-bottom: 20px;
+        width: 257px;
+    }
+    .left, .right {
+        height: 30px;
+        width: 103px;
+        border: 1px solid rgb(186, 226, 73);
+        background: rgb(29, 47, 48);
+        color: rgb(186, 226, 73);
+    }
+}
+
+@media (min-width: 320px) {
+    
+}
+
+@keyframes burgerAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: "Cormorant";
+    src: url(fonts/Cormorant/Cormorant-Bold.ttf);
+    src: url(fonts/Cormorant/Cormorant-Light.ttf);
+    src: url(fonts/Cormorant/Cormorant-Medium.ttf);
+    src: url(fonts/Cormorant/Cormorant-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(fonts/Open_Sans/OpenSans-Bold.ttf);
+    src: url(fonts/Open_Sans/OpenSans-Light.ttf);
+    src: url(fonts/Open_Sans/OpenSans-Medium.ttf);
+    src: url(fonts/Open_Sans/OpenSans-Regular.ttf);
+}
