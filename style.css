@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     color: white;
+    font-family: 'Open Sans';
+    overflow-x: hidden;
 }
 
 a {
@@ -179,8 +181,12 @@ a {
     color: rgb(186, 226, 73);
 }
 
-.section_2 {
+.section_wrapper {
+    height: 660px;
     background-color: rgb(29, 47, 48);
+}
+
+.section_2 {
     padding-top: 60px;
     padding-left: 100px;
     padding-bottom: 62px;
@@ -264,6 +270,93 @@ a {
     opacity: 0;
 }
 
+.artifacts_wrapper {
+    display: flex;
+}
+
+.new_artifacts {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(29, 47, 48);
+    padding-left: 100px;
+    padding-bottom: 60px;
+}
+
+.new_artifacts_p {
+    font-family: 'Cormorant';
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.artifacts_images {
+    background: rgb(11, 25, 25);
+    padding: 16px;
+    max-width: 825px;
+}
+
+.Moss03, .Moss06 {
+    margin-right: 50px;
+}
+
+.Moss06 {
+    margin-bottom: 18px;
+}
+
+.Layer21 {
+    position: absolute;
+}
+
+.Polypody {
+    position: relative;
+    margin-left: 269px;
+}
+
+.Bark05 {
+    margin-left: 43px;
+    margin-right: 53px;
+}
+
+.artifacts_info {
+    max-width: 255px;
+    background: rgb(186, 226, 73);
+    margin-left: 30px;
+    padding: 16px 16px 24px 16px;
+}
+
+.p_info {
+    color: rgb(80, 104, 41);
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.a_info {
+    color: rgb(11, 25, 25);
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    
+}
+
+.artifacts_h1 {
+    color: rgb(29, 47, 48);
+    font-family: Cormorant;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.info_wrapper {
+    margin-top: 75px;
+}
+
+.section_form {
+    background: rgb(29, 47, 48);
+    height: 470px;
+}
 
 @media (min-width: 1200px) {
     
@@ -360,11 +453,13 @@ a {
         display: flex;
         flex-direction: row;
         position: fixed;
-        justify-content: flex-start;
+        justify-content: space-around;
+        overflow: hidden;
     }
     .header_icons {
         margin: 0;
         padding: 0;
+        gap: 30px;
     }
     .burger {
         display: flex;
@@ -391,12 +486,13 @@ a {
     }
     .description {
         height: 450px;
+        justify-content: center;
     }
     .description_h1, .description_link {
-        margin-left: 20px;
         max-width: 400px;
         margin-top: 0;
         margin-bottom: 25px;
+
     }
     .description_text {
         display: none;
