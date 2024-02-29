@@ -290,6 +290,8 @@ a {
 }
 
 .artifacts_images {
+    display: flex;
+    flex-direction: column;
     background: rgb(11, 25, 25);
     padding: 16px;
     max-width: 825px;
@@ -309,7 +311,6 @@ a {
 
 .Polypody {
     position: relative;
-    margin-left: 269px;
 }
 
 .Bark05 {
@@ -357,6 +358,61 @@ a {
     background: rgb(29, 47, 48);
     height: 470px;
 }
+
+.artifacts_img1 {
+    width: 100px;
+    height: 115px;
+    margin-right: 49px;
+}
+
+.artifacts_img2 {
+    display: flex;
+    padding-right: 300px;
+}
+
+.group {
+    display: flex;
+}
+
+.artifacts_img {
+    display: flex;
+}
+
+.img72 {
+    position: absolute;
+    margin-left: 159px;
+}
+
+.img27 {
+    position: absolute;
+    margin-left: 130px;
+    margin-top: 30px;
+}
+
+.img51 {
+    position: absolute;
+    margin-top: 187px;
+    margin-left: 140px;
+}
+
+.img91 {
+    position: absolute;
+    margin-top: 269px;
+    margin-left: 109px;
+}
+
+.img17 {
+    position: absolute;
+    margin-left: 184px;
+}
+
+.img23 {
+    position: absolute;
+    margin-top: 269px;
+    margin-left: 54px;
+}
+
+
 
 @media (min-width: 1200px) {
     
@@ -540,9 +596,6 @@ a {
     from {opacity: 0;}
     to {opacity: 1;}
 }
-
-
-
 
 
 
