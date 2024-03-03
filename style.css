@@ -6,6 +6,15 @@ body {
     overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+    background-color: rgba(29, 47, 48);
+    width: 4px;
+    height: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(186, 226, 73);
+}
+
 a {
     border: none;
     color: white;
@@ -136,6 +145,7 @@ a {
     font-weight: 700;
     line-height: 100%;
     margin-left: 100px;
+    user-select: none;
 }
 
 .description_text {
@@ -151,13 +161,13 @@ a {
 
 .description_link {
     display: flex;
-    position: relative;
+    position: absolute;
     z-index: 50;
     font-family: 'Open Sans';
     font-size: 16px;
     font-weight: 700;
     line-height: 22px;
-    width: 157px;
+    width: 150px;
     margin-left: 95px;
     padding-left: 5px;
 }
@@ -165,6 +175,7 @@ a {
 .description_link img {
     margin-top: 4px;
     margin-left: 8px;
+    width: 37px;
 }
 
 .description_wrapper {
@@ -188,14 +199,16 @@ a {
 
 .section_2 {
     padding-top: 60px;
-    padding-left: 100px;
     padding-bottom: 62px;
+    justify-content: space-between;
+    align-items: center;
     position: absolute;
     width: 100%;
 }
 
 .cards {
     display: flex;
+    justify-content: center;
     gap: 40px;
 }
 
@@ -322,6 +335,14 @@ a {
     max-width: 255px;
     background: rgb(186, 226, 73);
     margin-left: 30px;
+    padding: 16px 16px 24px 16px;
+    margin-right: 10px;
+}
+
+.artifacts_info_in_section2 {
+    display: none;
+    max-width: 255px;
+    background: rgb(186, 226, 73);
     padding: 16px 16px 24px 16px;
 }
 
@@ -472,6 +493,11 @@ a {
     margin-left: 100px;
 }
 
+.form_background2 {
+    display: none;
+    width: 100vw;
+}
+
 .footer_top {
     height: 60px;
     background: rgb(11, 25, 25);
@@ -493,6 +519,7 @@ a {
     display: flex;
     height: 22px;
 }
+
 
 
 @media (min-width: 1200px) {
@@ -611,7 +638,7 @@ a {
         display: none;
         flex-direction: column;
         position: fixed;
-        height: 100%;
+        height: 200px;
         width: 100%;
         z-index: 100;
         background-color: rgb(29, 47, 48);
@@ -624,26 +651,37 @@ a {
     .description {
         height: 450px;
         justify-content: center;
+        padding-bottom: 50px;
+    }
+    .description_wrapper {
+        margin-top: 50px;
     }
     .description_h1, .description_link {
         max-width: 400px;
         margin-top: 0;
         margin-bottom: 25px;
-
     }
     .description_text {
         display: none;
     }
     .section_2 {
-        padding: 0;
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+        justify-content: start;
+        align-items: start;
+        position: relative;
+        width: auto;
+    }
+    .section_wrapper {
+        height: 100%;
+        justify-content: space-around;
     }
     .cards {
-        width: 500px;
+        width: 257px;
         height: 540px;
         position: relative;
         overflow: hidden;
-        margin-left: 100px;
-        margin-top: 30px;
     }
     .card {
         position: absolute;
@@ -654,10 +692,7 @@ a {
         opacity: 1;
     }
     .case_for_arrows {
-        justify-content: flex-start;
         opacity: 1;
-        margin-left: 100px;
-        margin-bottom: 20px;
         width: 257px;
     }
     .left, .right {
@@ -666,6 +701,71 @@ a {
         border: 1px solid rgb(186, 226, 73);
         background: rgb(29, 47, 48);
         color: rgb(186, 226, 73);
+    }
+    .new_artifacts {
+        padding: 20px;
+    }
+    .artifacts_images {
+        display: flex;
+        flex-wrap: wrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: 500px;
+    }
+    .artifacts_info {
+        display: none;
+    }
+    .artifacts_img {
+        position: relative;
+    }
+    .artifacts_img2 {
+        position: relative;
+    }
+    .artifacts_info_in_section2 {
+        display: inline;
+        width: 257px;
+        height: 478px;
+    }
+    .info_wrapper {
+        margin-top: 50px
+    }
+    .info_wrapper img {
+        width: 33px;
+        margin-left: 3px;
+    }
+    .artifacts_h1 {
+        margin-top: 10px;
+    }
+    .section_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 50px;
+    }
+    .form_text {
+        display: none;
+    }
+    .form_h {
+        margin-bottom: 20px;
+    }
+    .form_wrapper {
+        margin-left: 40px;
+    }
+    .form_background {
+        display: none;
+    }
+    .form_background2 {
+        display: block;
+        position: absolute;
+    }
+    .footer_top {
+        height: 64px;
+        position: relative;
+        width: 100%;
+    }
+    .footer_bottom {
+        height: 26px;
+        position: relative;
+        width: 100%;
     }
 }
 
